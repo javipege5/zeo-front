@@ -32,6 +32,14 @@ API BACKEND
 - Spring Data JPA para las consultas a la base de datos MySQL
 - Configuración del proyecto se encuentra en: src/main/resources/application.properties
 
+RUTAS POR DEFECTO
+
+- app front: http://localhost:4200
+- api backend: http://localhost:8080/api/users/
+- persistent: true
+- db: localhost:3306/db-demo-zeo
+- db username = root
+- db password = root
 
 
 
