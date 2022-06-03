@@ -1,27 +1,34 @@
 # ZeoFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
+- Aplicación con 3 vistas (Login, Registro y Listado de Usuarios) que pueden ser vistas por cualquier usuario logado o no
+- Validación básica en front los campos de los formularios de login y registro
+- Validación básica en la api con los los datos necesarios para el login y registro
+- Con la configuración persistent = true -> El registro, login y listado de usuarios se realiza con la base de datos mysql a traves de la api.
+- Con la configuración persistent = false -> El registro, login y listado de usuarios se realiza con la base de datos volátil en Session Storage
+- Con cualquier configuración de persistencia se controla que un usuario no pueda registrarse con un email ya existente en la base de datos
+- Responsive
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Configuración del proyecto:
+---------------------------
 
-## Code scaffolding
+APLICACIÓN FRONTEND
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular versión 13
+- Bootstrap versión 5.1.3
+- Variable 'persistent' de configuración de persistencia se encuentra en el fichero src\environments\environment.ts
+- Variable 'basePath'  con la ruta a la api se encuentra en el fichero src\environments\environment.ts
+- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+API BACKEND
 
-## Running unit tests
+- Java 8
+- Projecto Maven
+- Spring Boot 2.7.0
+- Spring Boot
+- Spring Data JPA para las consultas a la base de datos MySQL
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
