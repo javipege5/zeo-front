@@ -29,6 +29,7 @@ API BACKEND
 - Spring Boot 2.7.0
 - Spring Boot
 - Spring Data JPA para las consultas a la base de datos MySQL
+- Configuración del proyecto se encuentra en: src/main/resources/application.properties
 
 
 
