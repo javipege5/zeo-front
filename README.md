@@ -1,4 +1,5 @@
-# ZeoFront
+PRÁCTICA PROGRAMACIÓN
+
 
 - Aplicación con 3 vistas (Login, Registro y Listado de Usuarios) que pueden ser vistas por cualquier usuario logado o no
 - Validación básica en front los campos de los formularios de login y registro
