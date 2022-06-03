@@ -1,0 +1,20 @@
+.container{
+    max-width: 480px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    width: 95%;
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.input-danger {
+    border-color: var(--bs-danger);
+}
+ .alert-danger {
+    color: var(--bs-danger);
+    background-color: inherit;
+}
+

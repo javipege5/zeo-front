@@ -1,0 +1,49 @@
+<div class="container">
+    <h2 class="text-center mb-4">Registro de Usuarios</h2>
+    <form [formGroup]="formL">
+
+        <div class="form-outline mb-4 d-flex flex-column align-items-start">
+            <input type="text" class="form-control mb-2" formControlName="name"
+            placeholder="Name" [ngClass]="{'input-danger': submitted && form['name'].invalid  }" autofocus />
+            <small *ngIf=" submitted && form['name'].invalid" class="alert-danger">Por favor, introduce un nombre de usuario
+            válido</small>
+        </div>
+
+        <div class="form-outline mb-4 d-flex flex-column align-items-start">
+            <input type="number" class="form-control mb-2" formControlName="age"
+            placeholder="Edad" [ngClass]="{'input-danger': submitted && form['age'].invalid  }"  />
+            <small *ngIf=" submitted && form['age'].invalid" class="alert-danger">Por favor, introduce una edad válida</small>
+        </div>
+
+        <div class="form-outline mb-4 d-flex flex-column align-items-start">
+            <input type=" email" class="form-control mb-2" formControlName="email"
+            placeholder="Email" [ngClass]="{'input-danger': submitted && form['email'].invalid  }"  />
+            <small *ngIf=" submitted && form['email'].invalid" class="alert-danger">Por favor, introduce un correo
+            válido</small>
+        </div>
+
+        <div class="form-outline mb-4 d-flex flex-column align-items-start">
+            <input type="password" class="form-control mb-2" formControlName="password"
+                placeholder="Contraseña" [ngClass]="{'input-danger': submitted && form['password'].invalid }" />
+            <small *ngIf="submitted && form['password'].invalid" class="alert-danger">Por favor, introduce una
+                contraseña </small>
+        </div>
+        
+        <div class="row mb-4">
+            <div class="col">
+                <a routerLink="/login">¿Ya estás registrado? Haz click aquí para logearte </a>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <small *ngIf="submitted && resultsError" class="alert-danger">{{resultsError}} </small>
+            <button type="submit" class="btn btn-primary btn-block mt-2" (click)="submit()">Registrar</button>
+        </div>
+    </form>
+    
+    <div class="row mb-4">
+        <div class="d-flex justify-content-end">
+            <a routerLink="/list">Ver la lista de usuarios </a>
+        </div>
+    </div>
+</div>

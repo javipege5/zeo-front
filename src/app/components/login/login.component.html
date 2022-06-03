@@ -1,0 +1,36 @@
+<div class="container">
+    <h2 class="text-center mb-4">Alta de Usuarios</h2>
+    <form [formGroup]="formL">
+
+        <div class="form-outline mb-4 d-flex flex-column align-items-start">
+            <input type=" email" class="form-control mb-2" formControlName="email"
+            placeholder="Email" [ngClass]="{'input-danger': submitted && form['email'].invalid  }" autofocus />
+            <small *ngIf=" submitted && form['email'].invalid" class="alert-danger">Por favor, introduce un correo
+            válido</small>
+        </div>
+
+        <div class="form-outline mb-4 d-flex flex-column align-items-start">
+            <input type="password" class="form-control mb-2" formControlName="password"
+                placeholder="Contraseña" [ngClass]="{'input-danger': submitted && form['password'].invalid }" />
+            <small *ngIf="submitted && form['password'].invalid" class="alert-danger">Por favor, introduce una
+                contraseña válida </small>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col">
+                <a routerLink="/register">¿Aún no estás registrado? Haz click aquí para darte de alta </a>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <small *ngIf="submitted && resultsError" class="alert-danger">{{resultsError}} </small>
+            <button type="submit" class="btn btn-primary btn-block mt-2" (click)="submit()">Acceder</button>
+        </div>
+    </form>
+    
+    <div class="row mb-4">
+        <div class="d-flex justify-content-end">
+            <a routerLink="/list">Ver la lista de usuarios </a>
+        </div>
+    </div>
+</div>
