@@ -6,6 +6,7 @@
 - Con la configuración persistent = true -> El registro, login y listado de usuarios se realiza con la base de datos mysql a traves de la api.
 - Con la configuración persistent = false -> El registro, login y listado de usuarios se realiza con la base de datos volátil en Session Storage
 - Con cualquier configuración de persistencia se controla que un usuario no pueda registrarse con un email ya existente en la base de datos
+- Encriptación de contraseñas en la base de datos MySQL
 - Responsive
 
 
